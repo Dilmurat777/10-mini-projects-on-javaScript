@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #252745;
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #373b69;
+  padding: 1rem;
+}
+
+header .search {
+  background-color: transparent;
+  border-radius: 50px;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  border: 2px solid #22254b;
+  font-size: 1rem;
+  color: #eee;
+}
+
+header .search::placeholder {
+  color: #6f77d1;
+}
+
+header .search:focus {
+  outline: none;
+  background-color:  #22254b;
+}
+
+.movie {
+  background-color: #373b69;
+  width: 300px;
+  border-radius: 3px;
+  box-shadow: 1px 2px 8px 5px rgba(34, 60, 80, 0.2);
+  margin: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem 1rem;
+  color: #eee;
+  letter-spacing: 0.5px;
+}
+
+.movie-info span {
+  background-color: #252745;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: rgb(69, 218, 69);
+}
+.movie-info span.orange {
+  color: orange;
+}
+.movie-info span.red {
+  color: rgb(225, 67, 67);
+}
+
+.overview {
+  background-color: #fff;
+  padding: 2rem;
+  max-height: 100%;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease-in-out;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
