@@ -5,7 +5,7 @@ const searchEl = document.getElementById('search');
 
 const APIURL = "https://api.github.com/users/";
 
-getUser('Dilmurat777')
+getUser('')
 
 async function getUser(username) {
 	const resp = await fetch(APIURL + username);
